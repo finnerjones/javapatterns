@@ -21,15 +21,20 @@ See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html
 
    `gradle test`
 
-
+   Test results generated as *html* in 
+   
+   `build\reports\tests\test\index.html`
+   
 ----
 
 ## Patterns
 
-### Factory
+The Patterns are based on [this site](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
 
-Based on this site
-https://www.tutorialspoint.com/design_pattern/factory_pattern.htm
+### Factory
 
 * Category : Creational
 
+### Abstract Factory
+
+* Category : Creational

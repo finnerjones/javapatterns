@@ -42,4 +42,14 @@ public class GuitarFactoryTest {
 
     }
 
+    @Test
+    public void createStratocasterInLowercase() {
+        Guitar stratocastor = guitarFactory.createGuitar("stratocastor");
+
+        Assert.assertNotNull(stratocastor);
+        Assert.assertTrue("The guitar type should be Stratocastor", stratocastor.type().equalsIgnoreCase("Stratocaster"));
+
+    }
+
+
 }
