@@ -8,13 +8,16 @@ A project to demonstrate design patterns in Java.
 
 This project uses Gradle as the build tool.
 
-* Build the project with the command below from the project root
+See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html) for more information on Gradle with java projects.
+
+
+* **Build the project** with the command below from the project root
 
    `gradle build`
 
    A `jar` asset is created in the `build\libs` folder of the project
 
-* Run the unit tests with the command below from the project root
+* **Run the unit tests** with the command below from the project root
 
    `gradle test`
 

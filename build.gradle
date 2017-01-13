@@ -10,6 +10,20 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
+// added by Finner manually (https://docs.gradle.org/current/userguide/tutorial_java_projects.html)
+sourceCompatibility = 1.8
+version = 1.0
+
+// Add some JAR Manifest attributes
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Java Patterns',
+                'Implementation-Version': version
+    }
+}
+
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
