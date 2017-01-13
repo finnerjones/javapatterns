@@ -10,13 +10,13 @@ This project uses Gradle as the build tool.
 
 * Build the project with the command below from the project root
 
-`gradle build`
+   `gradle build`
 
-A `jar` asset is created in the `build\libs` folder of the project
+   A `jar` asset is created in the `build\libs` folder of the project
 
 * Run the unit tests with the command below from the project root
 
-`gradle test`
+   `gradle test`
 
 
 ----
