@@ -25,5 +25,21 @@ public class GuitarFactoryTest {
         Assert.assertTrue("The guitar type should be Telecaster", telecaster.type().equalsIgnoreCase("Telecaster"));
     }
 
+    @Test
+    public void anInvalidGuitarTypeCreatesStratocaster() {
+        Guitar myGuitar = guitarFactory.createGuitar("myGuitar");
+
+        Assert.assertNotNull(myGuitar);
+        Assert.assertTrue("The guitar type should be Stratocaster", myGuitar.type().equalsIgnoreCase("Stratocaster"));
+    }
+
+    @Test
+    public void createStratocaster() {
+        Guitar stratocastor = guitarFactory.createGuitar("Stratocastor");
+
+        Assert.assertNotNull(stratocastor);
+        Assert.assertTrue("The guitar type should be Stratocastor", stratocastor.type().equalsIgnoreCase("Stratocaster"));
+
+    }
 
 }

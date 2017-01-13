@@ -6,12 +6,20 @@ package com.finnerjones.java.patterns.factory;
 public class GuitarFactory {
 
     public static final String TELECASTER = "Telecaster";
+    public static final String STRATOCASTER = "Stratocaster";
+
 
     public Guitar createGuitar(String guitarModel) {
+        if (guitarModel.equalsIgnoreCase(STRATOCASTER)) {
+            return new Stratocaster();
+        }
+
+
         if (guitarModel.equalsIgnoreCase(TELECASTER)) {
             return new Telecaster();
         } else {
-            return new Telecaster();
+            // default guitar type
+            return new Stratocaster();
         }
     }
 
