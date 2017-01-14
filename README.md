@@ -24,6 +24,17 @@ See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html
    Test results generated as *html* in 
    
    `build\reports\tests\test\index.html`
+  
+* **Gradle tasks** 
+   
+   `gradle tasks`  -  lists the available tasks for the project
+   
+   `gradle clean`  -  deletes the `build` directory
+   
+   `gradle build`  -  builds the project and generates a JAR
+   
+   `gradle test`   -  runs the unit tests
+   
    
 ----
 
