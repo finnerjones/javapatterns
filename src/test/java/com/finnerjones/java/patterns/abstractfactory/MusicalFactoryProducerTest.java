@@ -30,7 +30,7 @@ public class MusicalFactoryProducerTest {
     @Test
     public void guitarFactoryWillNotCreatePercussion() {
         MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
-        Percussion percussion = gf.getPercussion("HiHat");
+        Percussion percussion = gf.getPercussion("Drums");
 
         Assert.assertNull(percussion);
     }
@@ -58,7 +58,7 @@ public class MusicalFactoryProducerTest {
     @Test
     public void createHiHatPercussion() {
         MusicalAbstractFactory pf = MusicalFactoryProducer.getFactory("PERCUSSION");
-        Percussion percussion = pf.getPercussion("HiHat");
+        Percussion percussion = pf.getPercussion("Drums");
 
         Assert.assertNotNull(percussion);
         Assert.assertTrue("Expecting a Hi Hat percussion", percussion.type().equalsIgnoreCase("Hi Hat"));
