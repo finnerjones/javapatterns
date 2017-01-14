@@ -2,6 +2,8 @@
 
 A project to demonstrate design patterns in Java.
 
+[![Build Status](https://travis-ci.org/finnerjones/javapatterns.svg?branch=develop)](https://travis-ci.org/finnerjones/javapatterns)
+
 ----
 
 ## Running & testing the code
