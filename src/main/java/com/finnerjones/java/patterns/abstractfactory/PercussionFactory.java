@@ -16,7 +16,7 @@ public class PercussionFactory extends MusicalAbstractFactory {
             return null;
         }
 
-        if (percussionType.equalsIgnoreCase("HiHat")) {
+        if (percussionType.equalsIgnoreCase("Drums")) {
             return new HiHat();
         }
 
