@@ -42,7 +42,7 @@ See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html
 
 ## Patterns
 
-The Patterns are based on [this site](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
+The Patterns are based on [this site](https://www.tutorialspoint.com/design_pattern/)
 
 ### Factory
 
