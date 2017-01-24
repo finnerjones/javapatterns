@@ -89,3 +89,35 @@ Band band = bb.buildThreePieceBand();
 BandBuilder bb = new BandBuilder();
 Band band = bb.buildFivePieceBand();
 ```
+
+### Decorator
+
+* Structural
+
+#### Examples
+
+```
+BasicElectricGuitar beg = new BasicElectricGuitar();
+beg.make();
+beg.listFeatures();
+```
+
+Output from `beg.listFeatures()`
+```
+Making a BasicElectricGuitar
+Jack Socket,Volume Control,Tone Controls x 2
+```
+
+```
+BasicElectricGuitar beg = new BasicElectricGuitar();
+TremoloGuitarDecorator tg = new TremoloGuitarDecorator(beg);
+tg.make();
+tg.listFeatures();
+```
+
+Output from `tg.listFeatures()`
+
+```
+Adding Tremolo arm to guitar
+Jack Socket,Volume Control,Tone Controls x 2,Tremolo Arm
+```
