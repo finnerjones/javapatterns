@@ -48,6 +48,44 @@ The Patterns are based on [this site](https://www.tutorialspoint.com/design_patt
 
 * Category : Creational
 
+#### Examples
+
+```
+Guitar telecaster = guitarFactory.createGuitar("Telecaster");
+```
+
+```
+Guitar stratocastor = guitarFactory.createGuitar("Stratocastor");
+```
+
 ### Abstract Factory
 
 * Category : Creational
+
+#### Examples
+
+```
+MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
+Guitar guitar = gf.getGuitar("Gibson");
+```
+
+```
+MusicalAbstractFactory pf = MusicalFactoryProducer.getFactory("PERCUSSION");
+Percussion percussion = pf.getPercussion("Drums");
+```
+
+### Build
+
+* Category : Creational
+
+#### Examples
+
+```
+BandBuilder bb = new BandBuilder();
+Band band = bb.buildThreePieceBand();
+```
+
+```
+BandBuilder bb = new BandBuilder();
+Band band = bb.buildFivePieceBand();
+```
