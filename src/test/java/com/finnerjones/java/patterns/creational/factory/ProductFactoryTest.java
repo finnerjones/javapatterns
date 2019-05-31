@@ -16,7 +16,7 @@ class ProductFactoryTest {
 
     @Test
     void createProductA() {
-        var pf = new ProductFactory();
+        var pf = new ProductFactory();      // Java 11 feature : local variable Type Inference
         Product pA = pf.createProduct("A");
         assertTrue(pA instanceof ProductA);
     }
