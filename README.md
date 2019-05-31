@@ -15,13 +15,13 @@ See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html
 
 * **Build the project** with the command below from the project root
 
-   `gradle build`
+   `./gradlew build`
 
    A `jar` asset is created in the `build\libs` folder of the project
 
 * **Run the unit tests** with the command below from the project root
 
-   `gradle test`
+   `./gradlew test`
 
    Test results generated as *html* in 
    
@@ -29,13 +29,13 @@ See [here](https://docs.gradle.org/current/userguide/tutorial_java_projects.html
   
 * **Gradle tasks** 
    
-   `gradle tasks`  -  lists the available tasks for the project
+   `./gradlew tasks`  -  lists the available tasks for the project
    
-   `gradle clean`  -  deletes the `build` directory
+   `./gradlew clean`  -  deletes the `build` directory
    
-   `gradle build`  -  builds the project and generates a JAR
+   `./gradlew build`  -  builds the project and generates a JAR
    
-   `gradle test`   -  runs the unit tests
+   `./gradlew test`   -  runs the unit tests
    
    
 ----
