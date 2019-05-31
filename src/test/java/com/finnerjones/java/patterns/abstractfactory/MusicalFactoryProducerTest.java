@@ -1,76 +1,77 @@
 package com.finnerjones.java.patterns.abstractfactory;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Created by finner on 13/1/17.
  */
-public class MusicalFactoryProducerTest {
+class MusicalFactoryProducerTest {
 
     @Test
-    public void createTelecastorGuitar() {
+    void createTelecastorGuitar() {
         MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
         Guitar guitar = gf.getGuitar("Telecaster");
 
-        Assert.assertNotNull(guitar);
-        Assert.assertTrue("Expecting a Telecaster guitar", guitar.model().equalsIgnoreCase("Telecaster"));
+        assertNotNull(guitar);
+        assertTrue(guitar.model().equalsIgnoreCase("Telecaster"), "Expecting a Telecaster guitar");
     }
 
 
     @Test
-    public void createGibsonGuitarReturnsNull() {
+    void createGibsonGuitarReturnsNull() {
         MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
         Guitar guitar = gf.getGuitar("Gibson");
 
-        Assert.assertNull(guitar);
+        assertNull(guitar);
     }
 
     @Test
-    public void guitarFactoryWillNotCreatePercussion() {
+    void guitarFactoryWillNotCreatePercussion() {
         MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
         Percussion percussion = gf.getPercussion("Drums");
 
-        Assert.assertNull(percussion);
+        assertNull(percussion);
     }
 
 
     @Test
-    public void percussionFactoryWillNotCreateGuitars() {
+    void percussionFactoryWillNotCreateGuitars() {
         MusicalAbstractFactory pf = MusicalFactoryProducer.getFactory("PERCUSSION");
         Guitar guitar = pf.getGuitar("Telecaster");
 
-        Assert.assertNull(guitar);
+        assertNull(guitar);
     }
 
 
 
     @Test
-    public void createStratocastorGuitar() {
+    void createStratocastorGuitar() {
         MusicalAbstractFactory gf = MusicalFactoryProducer.getFactory("GUITAR");
         Guitar guitar = gf.getGuitar("Stratocaster");
 
-        Assert.assertNotNull(guitar);
-        Assert.assertTrue("Expecting a Stratocaster guitar", guitar.model().equalsIgnoreCase("Stratocaster"));
+        assertNotNull(guitar);
+        assertTrue(guitar.model().equalsIgnoreCase("Stratocaster"), "Expecting a Stratocaster guitar");
     }
 
     @Test
-    public void createHiHatPercussion() {
+    void createHiHatPercussion() {
         MusicalAbstractFactory pf = MusicalFactoryProducer.getFactory("PERCUSSION");
         Percussion percussion = pf.getPercussion("Drums");
 
-        Assert.assertNotNull(percussion);
-        Assert.assertTrue("Expecting a Hi Hat percussion", percussion.type().equalsIgnoreCase("Hi Hat"));
+        assertNotNull(percussion);
+        assertTrue(percussion.type().equalsIgnoreCase("Hi Hat"), "Expecting a Hi Hat percussion");
     }
 
 
     @Test
-    public void createBassDrumPercussion() {
+    void createBassDrumPercussion() {
         MusicalAbstractFactory pf = MusicalFactoryProducer.getFactory("PERCUSSION");
         Percussion percussion = pf.getPercussion("BassDrum");
 
-        Assert.assertNotNull(percussion);
-        Assert.assertTrue("Expecting a Bass Drum percussion", percussion.type().equalsIgnoreCase("Bass Drum"));
+        assertNotNull(percussion);
+        assertTrue(percussion.type().equalsIgnoreCase("Bass Drum"), "Expecting a Bass Drum percussion");
     }
 }

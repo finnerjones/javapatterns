@@ -1,11 +1,30 @@
 package com.finnerjones.java.patterns.creational.factory;
 
-import org.junit.Test;
 
-public class ProductFactoryTest {
+import org.junit.jupiter.api.Test;  // JUnit5
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+class ProductFactoryTest {
 
     @Test
-    public void createProductA() {
-        
+    void verifyJUnit5() {
+        assertEquals(42, Integer.sum(19, 23));
+    }
+
+
+    @Test
+    void createProductA() {
+        var pf = new ProductFactory();
+        Product pA = pf.createProduct("A");
+        assertTrue(pA instanceof ProductA);
+    }
+
+    @Test
+    void createProductB() {
+        var pf = new ProductFactory();
+        Product pB = pf.createProduct("B");
+        assertTrue(pB instanceof ProductB);
     }
 }

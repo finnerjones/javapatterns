@@ -1,30 +1,33 @@
 package com.finnerjones.java.patterns.builder;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Created by finner on 14/1/17.
  */
-public class BandBuilderTest {
+class BandBuilderTest {
 
 
     @Test
-    public void buildThreePieceBand() {
+    void buildThreePieceBand() {
         BandBuilder bb = new BandBuilder();
         Band band = bb.buildThreePieceBand();
 
-        Assert.assertNotNull(band);
-        Assert.assertTrue("Expecting 3 instruments", band.numberOfInstruments() == 3 );
+        assertNotNull(band);
+        assertTrue(band.numberOfInstruments() == 3, "Expecting 3 instruments" );
     }
 
     @Test
-    public void buildFivePieceBand() {
+    void buildFivePieceBand() {
         BandBuilder bb = new BandBuilder();
         Band band = bb.buildFivePieceBand();
 
-        Assert.assertNotNull(band);
-        Assert.assertTrue("Expecting 3 instruments", band.numberOfInstruments() == 5 );
+        assertNotNull(band);
+        assertTrue(band.numberOfInstruments() == 5, "Expecting 3 instruments" );
     }
 
 }

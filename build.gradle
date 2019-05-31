@@ -10,11 +10,17 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
-// added by Finner manually (https://docs.gradle.org/current/userguide/tutorial_java_projects.html)
-sourceCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 version = 1.0
 
 // Add some JAR Manifest attributes
+
+// 1st step in adding Junit 5
+// https://www.baeldung.com/junit-5-gradle
+test {
+    useJUnitPlatform()
+}
 
 jar {
     manifest {
@@ -36,9 +42,11 @@ dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile 'org.slf4j:slf4j-api:1.7.21'
 
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
-    testCompile 'junit:junit:4.12'
+    // 2nd step in adding Junit5
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.4.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.4.2'
+
+    // backward compatibility with JUnit 3 & 4
+    testCompileOnly 'junit:junit:4.12'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.3.1'
 }
