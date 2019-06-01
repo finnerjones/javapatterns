@@ -4,6 +4,24 @@ A project to demonstrate design patterns in Java.
 
 [![Build Status](https://travis-ci.org/finnerjones/javapatterns.svg?branch=develop)](https://travis-ci.org/finnerjones/javapatterns)
 
+
+---
+
+### Notes on upgrading to Java 11
+
+- Download [IntelliJ 2019 JBR 11](https://www.jetbrains.com/idea/download)
+    - I had an issue the some keymaps on a Spanish Keyboard on MacOS
+        - Help -> Edit Custom Properties : add the line
+            - `actionSystem.force.alt.gr=true`
+        - Help -> Edit Custom VM Options : add the line
+            - `-Dcom.jetbrains.use.old.keyevent.processing=true`
+
+- I also had to install the `gradlew` wrapper in order for Gradle to recognize the Java version 11
+    - run the task `gradle wrapper` make sure it is 5.0+ at least
+    - add `sourceCompatibility = 11` to `build.gradle`
+    - add `targetCompatibility = 11` to `build.gradle`
+
+
 ----
 
 ## Running & testing the code
